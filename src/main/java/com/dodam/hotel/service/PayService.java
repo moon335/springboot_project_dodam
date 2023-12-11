@@ -102,8 +102,8 @@ public class PayService {
 			String from = Define.ADMIN_EMAIL;
 			String to = (String)((UserResponseDto.LoginResponseDto)session.getAttribute("principal")).getEmail();
 			
-			String api_key = "NCSYYRDX9Y5UNIO7";
-			String api_secret = "YEHIFZWNUP9GCLPXD9SHND2DWEOQRIQP";
+			String api_key = "";
+			String api_secret = "";
 			Message coolsms = new Message(api_key, api_secret);
 			HashMap<String, String> params = new HashMap<String, String>();
 			
