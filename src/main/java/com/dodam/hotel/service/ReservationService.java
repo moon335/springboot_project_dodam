@@ -199,13 +199,13 @@ public class ReservationService {
 		String to = (String)((UserResponseDto.LoginResponseDto)session.getAttribute("principal")).getEmail();
 
 			
-			String api_key = "NCSYYRDX9Y5UNIO7";
-			String api_secret = "YEHIFZWNUP9GCLPXD9SHND2DWEOQRIQP"; 
+			String api_key = "";
+			String api_secret = ""; 
 			Message coolsms = new Message(api_key, api_secret);
 			HashMap<String, String> params = new HashMap<String, String>();
 			
 			params.put("to", (String)session.getAttribute("tel"));
-			params.put("from", "01038379096");
+			params.put("from", "");
 			params.put("type", "SMS");
 			params.put("text", (String)((UserResponseDto.LoginResponseDto)session.getAttribute("principal")).getName()+"님의 예약이 완료되었습니다.  - 호텔 도담");
 			params.put("app_version", "test app 1.2");
